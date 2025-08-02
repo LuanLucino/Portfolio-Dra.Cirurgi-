@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dra. Isabela Monteiro</title>
+  <link rel="stylesheet" href="estilos/reset.css">
+<link rel="stylesheet" href="estilos/contato.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="fade-in">
+  <header class="navbar">
+  <div class="logo-area">
+    <img src="imagens/fotodeperfil.png" alt="Dra. Isabela Monteiro" class="foto-doutora" />
+    <div class="info-doutora">
+      <strong>Dra. Isabela Monteiro</strong>
+      <span>Cirurgiã-Dentista</span>
+    </div>
+  </div>
+  <nav class="menu-navbar">
+  <div class="menu-toggle" id="menu-toggle">
+    &#9776;
+  </div>
+  <ul class="nav-list" id="nav-list">
+    <li><a href="landpage.html">Início</a></li>
+    <li><a href="servicos.html">Serviços</a></li>
+    <li><a href="depoimentos.html" class="active">Depoimentos</a></li>
+    <li><a href="contato.html">Contato</a></li>
+  </ul>
+</nav>
+
+</header>
+
+
+  <main>
+    <section id="contato">
+  <h2>Fale conosco</h2>
+  <p>Envie uma mensagem ou entre em contato pelas redes sociais:</p>
+
+  <div class="contato-grid">
+    <!-- Formulário à esquerda -->
+    <form class="contato-form animate">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <!-- Redes sociais à direita -->
+    <div class="social-box animate">
+      <h3>Endereço</h3>
+      <p>Rua do Sorriso, nº 123 — Uberlândia, MG</p>
+
+      <h3>Redes & Contato</h3>
+      <div class="social-links">
+        <a href="https://wa.me/553499999999" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="https://instagram.com/" target="_blank">
+          <i class="fa-brands fa-instagram"></i> Instagram
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mapa abaixo -->
+  <div class="mapa animate">
+    <iframe src="https://maps.google.com/maps?q=Uberlândia,+MG&output=embed" loading="lazy" frameborder="0"></iframe>
+  </div>
+</section>
+
+  </main>
+
+  <footer>
+    <p>Site desenvolvido por <a href="https://seulink.com" target="_blank" rel="noopener">Luan Lucino</a> © 2025</p>
+  </footer>
+</body>
+</html>
