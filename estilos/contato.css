@@ -237,3 +237,28 @@
     color: #4b2e1e;
   }
 }
+
+/* Estilo das barras do menu hamburguer */
+.menu-toggle .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #4b2e1e;
+  transition: all 0.3s ease-in-out;
+  border-radius: 2px;
+}
+
+/* Animação quando ativo */
+.menu-toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+

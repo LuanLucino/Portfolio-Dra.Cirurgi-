@@ -1,80 +1,17 @@
-/* Container dos depoimentos */
-.cards-container {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 2rem;
+/* ===================== */
+/* 🎯 Base e Layout      */
+/* ===================== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  color: #333;
 }
 
-/* Estilo individual de cada depoimento */
-.card {
-  background-color: #ffffff;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  max-width: 300px;
-  flex: 1 1 280px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.02);
-}
-
-.card h3 {
-  font-size: 1.3rem;
-  margin: 0.5rem 0;
-  color: #4b2e1e;
-}
-
-.card p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 0.5rem;
-}
-
-/* Foto do paciente */
-.avatar {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
-}
-
-/* Animação de entrada */
-.card.animate {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: slideUp 0.8s ease forwards;
-  animation-delay: 0.3s;
-}
-
-@keyframes slideUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  .cards-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 100%;
-    max-width: 90%;
-  }
-}
-
-
-/* Header & Navbar padrão */
+/* ===================== */
+/* 🧑‍⚕️ Header & Profile */
+/* ===================== */
 header {
   background-color: #ffffff;
   padding: 2rem 1rem;
@@ -110,47 +47,9 @@ header {
   color: #4b2e1e;
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
-  flex-wrap: wrap;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  padding: 0;
-  margin: 0;
-}
-
-nav li {
-  margin: 0;
-}
-
-nav a {
-  padding: 0.6rem 1.2rem;
-  background-color: #4b2e1e;
-  color: #fff;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
-}
-
-nav a:hover {
-  background-color: #7b4d35;
-}
-
-nav a.active {
-  background-color: #9c694d;
-}
-
-
-
-/*MENU RESPONSIVO*/
-
+/* ===================== */
+/* 📱 Navbar             */
+/* ===================== */
 .menu-navbar {
   display: flex;
   justify-content: center;
@@ -185,18 +84,121 @@ nav a.active {
   background-color: #9c694d;
 }
 
+/* Botão hamburguer */
 .menu-toggle {
   display: none;
-  font-size: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   position: absolute;
-  right: 1rem;
   top: 0.5rem;
+  right: 1rem;
   z-index: 1001;
+  width: 30px;
+  height: 30px;
 }
 
-/* Responsivo para celular */
+.menu-toggle .bar {
+  width: 100%;
+  height: 4px;
+  background-color: #4b2e1e;
+  margin: 4px 0;
+  transition: 0.4s;
+  border-radius: 2px;
+}
+
+/* Animação para virar X */
+.menu-toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ===================== */
+/* 💬 Cards de Depoimento */
+/* ===================== */
+.cards-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  max-width: 300px;
+  flex: 1 1 280px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+  color: #4b2e1e;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* ===================== */
+/* 🎞️ Animação de entrada */
+/* ===================== */
+.card.animate {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.8s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===================== */
+/* 📱 Responsivo         */
+/* ===================== */
 @media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 90%;
+  }
+
   .nav-list {
     display: none;
     position: absolute;
@@ -215,7 +217,6 @@ nav a.active {
   }
 
   .menu-toggle {
-    display: block;
-    color: #4b2e1e;
+    display: flex;
   }
 }
