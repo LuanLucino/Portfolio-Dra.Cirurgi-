@@ -3,129 +3,218 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dra. Isabela Monteiro</title>
+  <title>Dra. Isabela Monteiro — Cirurgiã-Dentista</title>
   <link rel="stylesheet" href="estilos/reset.css" />
   <link rel="stylesheet" href="estilos/landpage.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <script defer src="script.js"></script>
 </head>
 <body class="fade-in">
 
-  <!-- Cabeçalho -->
+  <!-- Navbar -->
   <header>
-    <div class="profile">
-      <img src="imagens/fotodeperfil.png" alt="Foto da Dra. Isabela" />
-      <div class="nome">
-        <h1>Dra. Isabela Monteiro</h1>
-        <p>Cirurgiã-Dentista</p>
+    <div class="navbar-container">
+      <div class="brand">
+        <span class="brand-name">Dra. <strong>Isabela</strong> Monteiro</span>
+        <span class="brand-sub">Cirurgiã-Dentista · CRO-MG</span>
       </div>
+      <nav class="menu-navbar">
+        <div class="menu-toggle" id="menu-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <ul class="nav-list" id="nav-list">
+          <li><a href="index.html" class="active">Início</a></li>
+          <li><a href="paginas/servicos.html">Serviços</a></li>
+          <li><a href="paginas/depoimentos.html">Depoimentos</a></li>
+          <li><a href="paginas/contato.html">Contato</a></li>
+        </ul>
+        <a href="paginas/contato.html" class="btn-agendar">Agendar Consulta</a>
+      </nav>
     </div>
-    <nav class="menu-navbar">
-  <div class="menu-toggle" id="menu-toggle">
-    &#9776;
-  </div>
-  <ul class="nav-list" id="nav-list">
-    <li><a href="index.html">Início</a></li>
-    <li><a href="servicos.html">Serviços</a></li>
-    <li><a href="depoimentos.html" class="active">Depoimentos</a></li>
-    <li><a href="contato.html">Contato</a></li>
-  </ul>
-</nav>
-
   </header>
 
-  <!-- Conteúdo Principal -->
   <main>
 
-    <!-- Apresentação -->
-    <section id="apresentacao">
-      <h2>Seu sorriso merece cuidado profissional</h2>
-      <p>Bem-vindo ao consultório da Dra. Isabela. Aqui você encontra carinho, técnica e excelência em cada tratamento.</p>
-      <a href="servicos.html" class="cta-button">Conheça os serviços</a>
+    <!-- Hero -->
+    <section id="hero">
+      <div class="hero-content">
+
+        <!-- Texto -->
+        <div class="hero-text">
+          <p class="hero-subtitle">Bem-vinda ao cuidado que você merece</p>
+          <h1>
+            Excelência em<br>
+            <span class="highlight">Odontologia</span><br>
+            e Cuidados com o Sorriso
+          </h1>
+          <p class="hero-description">
+            Tratamentos modernos, ambiente acolhedor e resultados que transformam.
+            Seu sorriso está em mãos experientes e dedicadas.
+          </p>
+          <div class="hero-buttons">
+            <a href="paginas/contato.html" class="btn-primary">Agendar Consulta</a>
+            <a href="paginas/servicos.html" class="btn-secondary">Saiba Mais</a>
+          </div>
+        </div>
+
+        <!-- Foto -->
+        <div class="hero-image">
+          <div class="photo-wrapper">
+            <div class="photo-ring"></div>
+            <img src="imagens/foto-perfil.png" alt="Dra. Isabela Monteiro — Cirurgiã-Dentista" />
+            <div class="photo-accent"></div>
+            <div class="photo-accent-2"></div>
+            <div class="photo-badge">
+              <i class="fa-solid fa-tooth"></i>
+              <div>
+                <span>Dra. Isabela Monteiro<small>Cirurgiã-Dentista · CRO-MG</small></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Destaques -->
+      <div class="highlights">
+        <div class="highlight-card">
+          <i class="fa-solid fa-star-of-life"></i>
+          <div>
+            <h3>Experiência e Dedicação</h3>
+            <p>Anos de expertise em cirurgia odontológica</p>
+          </div>
+        </div>
+        <div class="highlight-card">
+          <i class="fa-solid fa-microchip"></i>
+          <div>
+            <h3>Tecnologia Avançada</h3>
+            <p>Equipamentos modernos e seguros</p>
+          </div>
+        </div>
+        <div class="highlight-card">
+          <i class="fa-solid fa-heart-pulse"></i>
+          <div>
+            <h3>Atendimento Humanizado</h3>
+            <p>Cuidado e atenção com cada paciente</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Antes e Depois -->
+    <!-- Casos Clínicos -->
     <section id="casos-clinicos">
-  <h2>Casos Clínicos — Antes e Depois</h2>
-
-  <div class="secao-tratamento">
-    <h3>🦷 Clareamento Dental</h3>
-    <div class="imagem-casos">
-      <div class="imagem-card">
-        <img src="imagens/antes-clareamento.png" alt="Antes do Clareamento Dental" />
-        <p>ANTES — Sorriso natural com tonalidade amarelada</p>
+      <div class="section-header">
+        <span class="section-tag">Resultados Reais</span>
+        <h2>Casos Clínicos — Antes e Depois</h2>
+        <p>Transformações que falam por si. Conheça os resultados dos nossos tratamentos.</p>
       </div>
-      <div class="imagem-card">
-        <img src="imagens/depois-clareamento.png" alt="Depois do Clareamento Dental" />
-        <p>DEPOIS — Clareamento Dental – Resultado em 1 sessão!</p>
+
+      <div class="caso-group">
+        <div class="caso-label"><i class="fa-solid fa-tooth"></i> Clareamento Dental</div>
+        <div class="imagem-casos">
+          <div class="imagem-card">
+            <span class="badge antes">ANTES</span>
+            <img src="imagens/clareamento-antes.png" alt="Antes do Clareamento Dental" />
+            <p>Sorriso natural com tonalidade amarelada</p>
+          </div>
+          <div class="arrow-divider"><i class="fa-solid fa-arrow-right"></i></div>
+          <div class="imagem-card">
+            <span class="badge depois">DEPOIS</span>
+            <img src="imagens/clareamento-depois.png" alt="Depois do Clareamento Dental" />
+            <p>Clareamento Dental — Resultado em 1 sessão!</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <hr />
-
-  <div class="secao-tratamento">
-    <h3>💎 Lentes de Contato Dental</h3>
-    <div class="imagem-casos">
-      <div class="imagem-card">
-        <img src="imagens/lentesdecontatoantes.png" alt="Antes das Lentes de Contato Dental" />
-        <p>ANTES — Dentes desalinhados e com imperfeições</p>
+      <div class="caso-group">
+        <div class="caso-label"><i class="fa-solid fa-gem"></i> Lentes de Contato Dental</div>
+        <div class="imagem-casos">
+          <div class="imagem-card">
+            <span class="badge antes">ANTES</span>
+            <img src="imagens/lentes-contato-antes.png" alt="Antes das Lentes de Contato Dental" />
+            <p>Dentes desalinhados e com imperfeições</p>
+          </div>
+          <div class="arrow-divider"><i class="fa-solid fa-arrow-right"></i></div>
+          <div class="imagem-card">
+            <span class="badge depois">DEPOIS</span>
+            <img src="imagens/lentes-contato-depois.png" alt="Depois das Lentes de Contato Dental" />
+            <p>Lentes de Contato Dental — Sorriso perfeito!</p>
+          </div>
+        </div>
       </div>
-      <div class="imagem-card">
-        <img src="imagens/lentesdecontatodepois.png" alt="Depois das Lentes de Contato Dental" />
-        <p>DEPOIS — Lentes de Contato Dental – Sorriso perfeito!</p>
+    </section>
+
+    <!-- Especialidades -->
+    <section id="servicos-destaque">
+      <div class="section-header">
+        <span class="section-tag">Especialidades</span>
+        <h2>Em Evidência</h2>
       </div>
-    </div>
-  </div>
-</section>
+      <div class="card-container">
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-tooth"></i></div>
+          <h3>Clareamento Dental</h3>
+          <p>Devolva o brilho ao seu sorriso com segurança e rapidez.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-gem"></i></div>
+          <h3>Lentes de Contato Dental</h3>
+          <p>Corrija imperfeições e alcance a estética que você merece.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-teeth-open"></i></div>
+          <h3>Ortodontia</h3>
+          <p>Aparelhos modernos para alinhamento discreto e eficaz.</p>
+        </div>
+      </div>
+    </section>
 
-
-
-    <!-- Serviços em Destaque -->
-   <section id="servicos-destaque">
-  <h2>Especialidades em Evidência</h2>
-  <div class="card-container">
-    <div class="card">
-      <h3>Clareamento Dental</h3>
-      <p>Devolva o brilho ao seu sorriso com segurança e rapidez.</p>
-    </div>
-    <div class="card">
-      <h3>Lentes de Contato Dental</h3>
-      <p>Corrija imperfeições e alcance a estética que você merece.</p>
-    </div>
-    <div class="card">
-      <h3>Ortodontia</h3>
-      <p>Aparelhos modernos para alinhamento discreto e eficaz.</p>
-    </div>
-  </div>
-</section>
-
-
-    <!-- Conteúdo Educativo -->
+    <!-- Dicas -->
     <section id="conteudo-educativo">
-  <h2>Dicas e Informação</h2>
-  <div class="card-container">
-    <div class="card">
-      <h3>✔️ Dicas de escovação eficiente</h3>
-      <p>Use escovas com cerdas macias e troque a escova a cada 3 meses. Escove os dentes por pelo menos 2 minutos, sempre após as refeições.</p>
-    </div>
-    <div class="card">
-      <h3>🦷 Mitos sobre o clareamento</h3>
-      <p>Clarear os dentes não enfraquece o esmalte — quando feito por profissionais, é totalmente seguro. Evite receitas caseiras perigosas!</p>
-    </div>
-    <div class="card">
-      <h3>😱 Como vencer o medo do dentista</h3>
-      <p>Ambiente acolhedor, explicações claras e tratamentos humanizados ajudam a superar esse receio. Aqui, cuidamos do seu bem-estar!</p>
-    </div>
-  </div>
-</section>
-
+      <div class="section-header">
+        <span class="section-tag">Saúde Bucal</span>
+        <h2>Dicas e Informação</h2>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-check"></i></div>
+          <h3>Escovação Eficiente</h3>
+          <p>Use escovas com cerdas macias e troque a cada 3 meses. Escove por pelo menos 2 minutos após as refeições.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-circle-info"></i></div>
+          <h3>Mitos sobre Clareamento</h3>
+          <p>Clarear os dentes não enfraquece o esmalte — quando feito por profissionais, é totalmente seguro.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-shield-heart"></i></div>
+          <h3>Vencer o Medo do Dentista</h3>
+          <p>Ambiente acolhedor, explicações claras e tratamentos humanizados ajudam a superar esse receio.</p>
+        </div>
+      </div>
+    </section>
 
   </main>
 
-  <!-- Rodapé -->
   <footer>
-    <p>Site desenvolvido por <a href="https://seulink.com" target="_blank" rel="noopener">Luan Lucino</a> © 2025</p>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="brand-name">Dra. <strong>Isabela</strong> Monteiro</span>
+        <p>Cirurgiã-Dentista — Uberlândia, MG</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Início</a>
+        <a href="paginas/servicos.html">Serviços</a>
+        <a href="paginas/depoimentos.html">Depoimentos</a>
+        <a href="paginas/contato.html">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Site desenvolvido por <a href="https://portobeloweb.com.br" target="_blank" rel="noopener">Luan Lucino</a> © 2025</p>
+    </div>
   </footer>
 
 </body>

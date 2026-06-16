@@ -1,22 +1,28 @@
+// Fade-out na navegação entre páginas
 document.querySelectorAll("nav a").forEach(link => {
   link.addEventListener("click", function (e) {
     if (this.href.includes("#")) return;
     e.preventDefault();
     document.body.classList.remove("fade-in");
     document.body.classList.add("fade-out");
-    setTimeout(() => {
-      window.location.href = this.href;
-    }, 300);
+    const target = this.href;
+    setTimeout(() => { window.location.href = target; }, 280);
   });
 });
 
+// Hamburger menu
+const toggleBtn = document.getElementById("menu-toggle");
+const navList   = document.getElementById("nav-list");
 
-
-
-  const toggleBtn = document.getElementById('menu-toggle');
-  const navList = document.getElementById('nav-list');
-
-  toggleBtn.addEventListener('click', () => {
-    navList.classList.toggle('active');
+if (toggleBtn && navList) {
+  toggleBtn.addEventListener("click", () => {
+    navList.classList.toggle("active");
   });
 
+  // Fecha ao clicar fora
+  document.addEventListener("click", (e) => {
+    if (!toggleBtn.contains(e.target) && !navList.contains(e.target)) {
+      navList.classList.remove("active");
+    }
+  });
+}

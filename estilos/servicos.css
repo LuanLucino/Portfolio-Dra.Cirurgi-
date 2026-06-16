@@ -1,217 +1,44 @@
-/* Container dos cards de serviços */
+/* ===================================================
+   SERVIÇOS PAGE
+   =================================================== */
+
+main section {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+/* Usa .card e .card-icon do reset.css (compartilhado) */
+
 .cards-container {
   display: flex;
-  gap: 2rem;
   flex-wrap: wrap;
+  gap: 1.5rem;
   justify-content: center;
-  margin-top: 1.5rem;
 }
 
-/* Estilo de cada card */
 .card {
-  background-color: #ffffff;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  max-width: 300px;
-  flex: 1 1 280px;
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.8rem;
-  color: #4b2e1e;
-}
-
-.card p {
-  font-size: 1rem;
-  color: #555;
-}
-
-/* Ícone do serviço */
-.icon {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  color: #4b2e1e;
-  display: block;
+  flex: 1 1 260px;
+  max-width: 320px;
 }
 
 /* Animação de entrada */
 .card.animate {
   opacity: 0;
   transform: translateY(20px);
-  animation: slideUp 0.8s ease forwards;
-  animation-delay: 0.3s;
+  animation: slideUp 0.6s ease forwards;
 }
+
+.card.animate:nth-child(1) { animation-delay: 0.1s; }
+.card.animate:nth-child(2) { animation-delay: 0.2s; }
+.card.animate:nth-child(3) { animation-delay: 0.3s; }
+.card.animate:nth-child(4) { animation-delay: 0.4s; }
 
 @keyframes slideUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsivo para dispositivos móveis */
-@media (max-width: 768px) {
-  .cards-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 100%;
-    max-width: 90%;
-  }
-}
-
-
-/* Header & Navbar padrão */
-header {
-  background-color: #ffffff;
-  padding: 2rem 1rem;
-  border-bottom: 1px solid #ddd;
-  text-align: center;
-}
-
-.profile {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  margin-bottom: 1rem;
-}
-
-.profile img {
-  width: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.profile h1 {
-  font-size: 2rem;
-  font-family: 'Dancing Script', cursive;
-  margin: 0;
-  color: #4b2e1e;
-}
-
-.profile p {
-  font-size: 1.2rem;
-  margin-top: 0.3rem;
-  color: #4b2e1e;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
-  flex-wrap: wrap;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  padding: 0;
-  margin: 0;
-}
-
-nav li {
-  margin: 0;
-}
-
-nav a {
-  padding: 0.6rem 1.2rem;
-  background-color: #4b2e1e;
-  color: #fff;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
-}
-
-nav a:hover {
-  background-color: #7b4d35;
-}
-
-nav a.active {
-  background-color: #9c694d;
-}
-
-
-
-/*MENU RESPONSIVO*/
-
-.menu-navbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.nav-list {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  padding: 0;
-  margin-top: 1rem;
-  flex-wrap: wrap;
-}
-
-.nav-list li a {
-  padding: 0.6rem 1.2rem;
-  background-color: #4b2e1e;
-  color: #fff;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
-}
-
-.nav-list li a:hover {
-  background-color: #7b4d35;
-}
-
-.nav-list li a.active {
-  background-color: #9c694d;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-  position: absolute;
-  right: 1rem;
-  top: 0.5rem;
-  z-index: 1001;
-}
-
-/* Responsivo para celular */
-@media (max-width: 768px) {
-  .nav-list {
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 1rem;
-    background-color: #fff;
-    box-shadow: 0 6px 10px rgba(0,0,0,0.1);
-    padding: 1rem;
-    flex-direction: column;
-    border-radius: 8px;
-    z-index: 1000;
-  }
-
-  .nav-list.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-    color: #4b2e1e;
-  }
+@media (max-width: 600px) {
+  main section { padding: 3rem 1.2rem; }
+  .card { flex: 1 1 100%; max-width: 100%; }
 }
